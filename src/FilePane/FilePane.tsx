@@ -1,21 +1,21 @@
-import React from 'react'
-import { Box, Typography } from '@mui/material'
-import { FileRow } from './components/FileRow'
-import { useWorkspaceContext } from '../Workspace/Workspace.context'
+import React from 'react';
+import { Box, Typography } from '@mui/material';
+import { FileRow } from './components/FileRow';
+import { useWorkspaceContext } from '../Workspace/Workspace.context';
+import Tree from '../TreeUI/Tree';
+import { buildFlatTreeFileStructure } from '../TreeUI/helper';
 
 export const FilePane = () => {
-  const { files } = useWorkspaceContext()
+  const { files } = useWorkspaceContext();
 
   return (
     <Box>
       <Box p={1}>
-        <Typography variant="h6">Files</Typography>
+        <Typography variant='h6'>Files</Typography>
       </Box>
       <Box>
-        {
-          files.map((file) => <FileRow key={file.path} file={file} />)
-        }
+        <Tree files={files} />
       </Box>
     </Box>
-  )
-}
+  );
+};

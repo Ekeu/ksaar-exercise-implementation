@@ -1,10 +1,9 @@
-import { File } from './Workspace.context'
+import { File } from './Workspace.context';
 
 export default [
   {
     path: 'app/src/App.tsx',
-    contents: 
-`import React from 'react'
+    contents: `import React from 'react'
 import { WidgetList } from './WidgetList/WidgetList'
 import featuredWidgets from '../data/featuredWidgets'
 import clearanceWidgets from '../data/clearanceWidgets'
@@ -19,50 +18,45 @@ export const App = () => {
       <WidgetList widgets={widgets} />
     </div>
   )
-}`
+}`,
   },
   {
     path: 'app/data/featuredWidgets.js',
-    contents: 
-`export default [
+    contents: `export default [
   { name: 'spadoink', price: 777 },
   { name: 'kafloof', price: 1326 },
   { name: 'sweezil', price: 966 }
-]`
+]`,
   },
   {
     path: 'app/data/discontinuedWidgets.js',
-    contents: 
-`export default [
+    contents: `export default [
   { name: 'neewumps', price: 138 },
   { name: 'snarcap', price: 5873 },
   { name: 'topwolly', price: 83 }
-]`
+]`,
   },
   {
     path: 'app/style.css',
-    contents: 
-`body, html {
+    contents: `body, html {
   height: 100%;
   width: 100%;
   font-family: comic-sans;
   font-size: 1rem;
   background: limegreen;
-}`
+}`,
   },
   {
     path: 'app/data/clearanceWidgets.js',
-    contents: 
-`export default [
+    contents: `export default [
   { name: 'plonches', price: 839 },
   { name: 'chopfle', price: 7743 },
   { name: 'kazkabo', price: 9133 }
-]`
+]`,
   },
-  { 
-    path: 'app/src/WidgetList/Widget.tsx', 
-    contents: 
-`import React from 'react'
+  {
+    path: 'app/src/WidgetList/Widget.tsx',
+    contents: `import React from 'react'
 
 export const Widget = ({ widget }) => {
   return (
@@ -71,12 +65,11 @@ export const Widget = ({ widget }) => {
       <span>\${widget.price / 1000.0}</span>
     </div>
   )
-}`, 
+}`,
   },
-  { 
-    path: 'app/src/WidgetList/WidgetList.tsx', 
-    contents: 
-`import React from 'react'
+  {
+    path: 'app/src/WidgetList/WidgetList.tsx',
+    contents: `import React from 'react'
 import { Widget } from './Widget'
 
 export const WidgetList = ({ widgets }) => {
@@ -91,12 +84,11 @@ export const WidgetList = ({ widgets }) => {
       })}
     </ul>
   )
-}`, 
+}`,
   },
-  { 
-    path: 'app/index.html', 
-    contents: 
-`<!DOCTYPE html>
+  {
+    path: 'app/index.html',
+    contents: `<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -109,6 +101,6 @@ export const WidgetList = ({ widgets }) => {
     <script type="module" src="/src/App.tsx"></script>
     <script type="module" src="/style.css"></script>
   </body>
-</html>` 
+</html>`,
   },
-] as File[]
+] as File[];

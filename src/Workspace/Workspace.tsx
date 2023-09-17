@@ -1,9 +1,9 @@
-import React from 'react'
-import { Box, Typography } from '@mui/material'
-import { FilePane } from '../FilePane/FilePane'
-import { Editor } from '../Editor/Editor'
-import { WorkspaceProvider } from './Workspace.context'
-import defaultFiles from './defaultFiles'
+import React from 'react';
+import { Box, Typography } from '@mui/material';
+import { FilePane } from '../FilePane/FilePane';
+import { Editor } from '../Editor/Editor';
+import { WorkspaceProvider } from './Workspace.context';
+import defaultFiles from './defaultFiles';
 
 export const Workspace = () => {
   return (
@@ -13,5 +13,5 @@ export const Workspace = () => {
         <Editor />
       </Box>
     </WorkspaceProvider>
-  )
-}
+  );
+};
